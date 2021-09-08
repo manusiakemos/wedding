@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply font-bold py-2 px-4 rounded hover:shadow rounded-3xl transform hover:scale-110 transition-all;
+    }
+
+    .btn-primary {
+        @apply bg-red-400 text-white hover:scale-110;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-500 text-white hover:scale-110;
+    }
+
+    .btn-circle {
+        @apply font-bold py-2 px-4 rounded-full h-10 w-10 flex items-center justify-center transform hover:scale-110 transition-all;
+    }
+
+    .text-center {
+        @apply flex items-center justify-center
+    }
+
+    .filepond--drop-label{
+        @apply border-dashed border-gray-500 border-2;
+    }
+
+    .select2-dropdown.select2-dropdown--below{
+        @apply bg-gray-100 dark:bg-gray-700 dark:text-gray-300;
+    }
+
+    .error {
+        @apply text-red-500 font-light text-xs;
+    }
+
+    .modal-title {
+        @apply text-xl font-bold;
+    }
+
+    .nav-item{
+        @apply items-center text-gray-100 py-4 pl-3;
+    }
+
+    .nav-active{
+        @apply hover:text-red-400 lg:rounded-l-full sm:rounded text-red-500 bg-gray-50 dark:bg-gray-800;
+    }
+
+    .account-link:hover{
+        @apply bg-red-500;
+    }
+
+    .breadcrumb-item{
+        @apply p-1 rounded-lg border-2 border-gray-200 hover:bg-red-400 hover:border-red-400 hover:text-gray-200 transition ease-out duration-200 mr-1;
+    }
+
+    .breadcrumb-item-active{
+        @apply border-2 p-1 border-red-400 rounded-lg mx-1 hover:bg-red-400 hover:text-white;
+    }
+
+    .heading{
+        @apply font-serif text-lg font-bold dark:text-gray-400 text-gray-700;
+    }
+
+    label{
+        @apply dark:text-gray-400 text-gray-700;
+    }
+
+    .filepond--drop-label{
+        @apply dark:bg-gray-700 dark:text-gray-300;
+    }
+
+    .filepond--item-panel {
+        @apply dark:bg-gray-700 dark:text-gray-300;
+    }
+
+    .select2-selection__rendered, .select2-search__field{
+        @apply block w-full dark:bg-gray-600 dark:text-gray-100 bg-gray-200 border-transparent focus:border-red-400 focus:bg-gray-200 dark:focus:bg-gray-800 focus:ring-0 text-sm;
+    }
+
+    .select2-container--default{
+        @apply dark:bg-gray-700 dark:text-gray-300 bg-gray-200 text-gray-700 ;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        @apply rounded block w-full dark:bg-gray-600 dark:text-gray-100 bg-gray-200 border-transparent focus:border-red-400 focus:bg-gray-200 dark:focus:bg-gray-800 focus:ring-0 text-sm;
+    }
+
+    .ck-editor {
+        @apply rounded block w-full dark:bg-gray-600 dark:text-gray-100 bg-gray-200 border-transparent focus:border-red-400 focus:bg-gray-200 dark:focus:bg-gray-800 focus:ring-0 text-sm;
+    }
+
+    /*.note-editable{*/
+    /*    @apply rounded block w-full dark:bg-gray-600 dark:text-gray-100 bg-gray-200 border-transparent focus:border-red-400 focus:bg-gray-200 dark:focus:bg-gray-800 focus:ring-0 text-sm;*/
+    /*}*/
+}

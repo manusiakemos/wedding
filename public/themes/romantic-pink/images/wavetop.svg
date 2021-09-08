@@ -1,0 +1,9 @@
+<svg id="visual" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 72.1">
+    <defs>
+        <style>.cls-1{fill:#f4f0ef;}</style>
+    </defs>
+    <title>wave-haikei</title>
+    <path class="cls-1"
+          d="M900,72.1v63.4l-1,.2a187.22,187.22,0,0,1-90.64-3.49c-23.37-6.77-51.74-13.32-88.41-24C660,90.7,600,84.3,540,84s-120,5.3-180,19.8S240,141.7,180,144,60,127.7,30,118.3L0,109V72.1Z"
+          transform="translate(0 -72.1)"/>
+</svg>
