@@ -1,4 +1,4 @@
-# Skeleton Admin
+# Wedding Admin
 
 Prebuilt Admin With Livewire and Tailwind CSS
 
