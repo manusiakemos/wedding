@@ -3,7 +3,11 @@
 namespace App\Http\Livewire\Invitation;
 
 use App\Models\Invitation;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use Intervention\Image\Facades\Image;
+use Intervention\Image\ImageManager;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -255,6 +259,7 @@ class Detail extends Component
                     'cover_image' => 'image|nullable|sometimes'
                 ]);
                 if ($this->cover_image) {
+                    $basename = Str::random();
                     $db->addMedia($this->cover_image->getRealPath())->toMediaCollection('cover_image');
                 }
                 if ($this->male_image) {

@@ -7,7 +7,9 @@ namespace App\Http\Livewire\InvitationGallery;
 use App\Models\Invitation;
 use App\Models\InvitationGallery;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -156,11 +158,32 @@ class InvitationGalleryPage extends Component
         $db->desc = $this->gallery['desc'];
         if($this->image){
             if($db->filename && $this->updateMode){
-                File::delete(storage_path("app/{$db->filename}"));
+                File::delete(storage_path("app/gallery/{$db->filename}"));
+                File::delete(storage_path("app/gallery/thumb_{$db->filename}"));
             }
-            $filename = $this->image->store('gallery');
-            $db->filename = $filename;
+            $filename = $this->uploadImageIntervention($this->image);
+            $this->image->storeAs('gallery',$filename);
+            $db->filename = '/gallery/'.$filename;
         }
         return $db->save();
+    }
+
+    private function uploadImageIntervention($image)
+    {
+        $basename = Str::random();
+        $thumbnail = 'thumb_' . $basename .'.'. $image->getClientOriginalExtension();
+        $original = $basename .'.'. $image->getClientOriginalExtension();
+
+        $image = $this->image;
+        $img = Image::make($image->getRealPath())->encode('jpg', 65)
+            ->resize(360, null, function ($c) {
+            $c->aspectRatio();
+            $c->upsize();
+        });
+        $img->stream();
+        Storage::disk('local')->put("/gallery/$thumbnail", $img);
+
+        return $original;
+
     }
 }

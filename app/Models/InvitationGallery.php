@@ -32,6 +32,8 @@ class InvitationGallery extends Model
 {
     protected $primaryKey = "gallery_id";
 
+    protected $appends = ['thumbnail'];
+
     use HasFactory;
 
     /**
@@ -40,5 +42,17 @@ class InvitationGallery extends Model
     public function theme()
     {
         return $this->hasOne(\App\Models\Invitation::class, 'gallery_id', 'gallery_id');
+    }
+
+    public function getThumbnailAttribute()
+    {
+
+        if (isset($this->filename)) {
+            $fx = $this->filename;
+            $fy = preg_replace('/\/gallery\//', '', $fx);
+            return '/gallery/thumb_' . $fy;
+        } else {
+            return null;
+        }
     }
 }

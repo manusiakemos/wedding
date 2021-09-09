@@ -1,6 +1,8 @@
 @extends("themes.{$invitation->theme->key}.layout_container")
 
 @section("content")
+    @include("themes.{$invitation->theme->key}.includes._preloader")
+
     @include("themes.{$invitation->theme->key}.includes._cover")
 
     @include("themes.{$invitation->theme->key}.includes._hello")

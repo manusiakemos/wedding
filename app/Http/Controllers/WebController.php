@@ -17,7 +17,7 @@ class WebController extends Controller
             ->where("invitation_url", "=", $invitationUrl)
             ->firstOrFail();
         $meta = json_decode($invitation->invitation_meta, true);
-        $cover_image = $invitation->getFirstMediaUrl('cover_image');
+        $cover_image = $invitation->getFirstMedia('cover_image')->getUrl('thumb');
         $male_image = $invitation->getFirstMediaUrl('male_image');
         $female_image = $invitation->getFirstMediaUrl('female_image');
         return view("themes.{$invitation->theme->key}.index", compact('invitation', 'meta', 'cover_image', 'male_image', 'female_image'));
