@@ -1,5 +1,7 @@
 # Wedding Admin
 
+<a href="https://hafizwaida.online">Demo</a>
+
 Prebuilt Admin With Livewire and Tailwind CSS
 
 ## Seeder
