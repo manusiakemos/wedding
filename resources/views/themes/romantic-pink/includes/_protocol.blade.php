@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h4 class="text-handwrite text-secondary display-4 text-center fw-bolder">
+                <h4 class="text-handwrite text-success display-4 text-center fw-bolder">
                     Himbauan
                 </h4>
 
@@ -21,21 +21,22 @@
                 <small class="text-center fw-bold mt-3">Memakai Masker</small>
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('/themes/'.$invitation->theme->key.'/images//social-distancing.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
+                <img loading="lazy" src="{{ asset('/themes/'.$invitation->theme->key.'/images//social-distancing.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
                 <small class="text-center fw-bold mt-3">Menjaga jarak</small>
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('/themes/'.$invitation->theme->key.'/images/handwash.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
+                <img loading="lazy" src="{{ asset('/themes/'.$invitation->theme->key.'/images/handwash.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
                 <small class="text-center fw-bold mt-3">Menjaga Kebersihan</small>
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('/themes/'.$invitation->theme->key.'/images/no-handshake.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
+                <img loading="lazy" src="{{ asset('/themes/'.$invitation->theme->key.'/images/no-handshake.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
                 <small class="text-center fw-bold mt-3">Tidak Bersalaman</small>
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('/themes/'.$invitation->theme->key.'/images/temperature.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
+                <img loading="lazy" src="{{ asset('/themes/'.$invitation->theme->key.'/images/temperature.png') }}" alt="face mask" class="rounded-circle img-protocol bg-dark p-3">
                 <small class="text-center fw-bold mt-3">Pemeriksaan Suhu Tubuh</small>
             </div>
         </div>
     </div>
 </section>
+

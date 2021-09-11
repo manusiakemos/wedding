@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4 class="text-handwrite text-secondary display-4 text-center fw-bolder">
+                <h4 class="text-handwrite text-success display-4 text-center fw-bolder">
                     Lokasi
                 </h4>
             </div>

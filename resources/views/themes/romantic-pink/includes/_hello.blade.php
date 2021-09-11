@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h4 class="text-handwrite text-secondary display-4 text-center fw-bolder">
+                <h4 class="text-handwrite text-success display-4 text-center fw-bolder">
                     Assalamualaikum
                 </h4>
 
@@ -30,7 +30,7 @@
                     <div class="col">
                         <div class="left-side d-flex justify-content-end align-items-center">
                             <div class="text-end mx-3 d-none d-lg-block">
-                                <h4 class="text-handwrite text-capitalize text-secondary fw-bolder">
+                                <h4 class="text-handwrite text-capitalize text-primary fw-bolder">
                                     {{$meta['brides']['male']['nickname']}}
                                 </h4>
                                 <small class="text-black-50 text-capitalize">
@@ -55,7 +55,7 @@
                                      class="rounded-circle hello-image darken-img">
                             </div>
                             <div class="text-start mx-3 d-none d-lg-block">
-                                <h4 class="text-handwrite text-capitalize text-secondary fw-bolder">
+                                <h4 class="text-handwrite text-capitalize text-primary fw-bolder">
                                     {{$meta['brides']['female']['nickname']}}
                                 </h4>
                                 <small class="text-black-50 text-capitalize">
