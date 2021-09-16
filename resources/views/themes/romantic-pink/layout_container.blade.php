@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include("themes._meta")
-    <meta name="theme-color" content="#d8558d">
+    <meta name="theme-color" content="#a1886c">
 
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="{{asset("themes/{$invitation->theme->key}/css/app.css")}}">
+    <link rel="stylesheet" href="{{asset("themes/{$invitation->theme->key}/css/app.css")}}?version=1.1">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     @stack("style")
 

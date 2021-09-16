@@ -10,6 +10,7 @@
         <div class="row">
             <div class="col overflow-hidden">
                 <div id="lightgallery" class="owl-carousel">
+
                     @foreach($invitation->galleries as $item)
                         <div>
                             <a href="{{asset($item->filename)}}" class="gallery-item">
@@ -40,7 +41,7 @@
                 loop: false,
                 margin: 10,
                 nav: true,
-                autoplay: true,
+                autoplay: false,
                 autoplayHoverPause: true,
                 navText:[
                     '<i class="fas fa-2x fa-caret-left"></i>',

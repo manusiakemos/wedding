@@ -1,14 +1,15 @@
 <section id="home" class="d-flex align-items-center justify-content-center">
-    <div style=" min-height: 100vh;
-    overflow-x: hidden;
-    width: 100%;
-    background-size: cover;
-    background: url('{!! $cover_image !!}') no-repeat bottom;
-    filter: brightness(.7);
-    left: 0;
-    position: absolute;
-    top: 0;
-    z-index: -1"></div>
+    <div style="
+        min-height: 100vh;
+        overflow-x: hidden;
+        width: 100%;
+        background-size: contain;
+        background: url('{!! $cover_image !!}') no-repeat center;
+        filter: brightness(.7) blur(4px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1"></div>
     <div>
         <div class="container">
             <div class="row">
@@ -32,7 +33,8 @@
                 </div>
             </div>
         </div>
-        <div class="container d-flex justify-content-center align-items-center mt-4" v-if="status" id="countdown" v-cloak>
+        <div class="container d-flex justify-content-center align-items-center mt-4" v-if="status" id="countdown"
+             v-cloak>
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-center flex-column mb-3" v-for="v in cd">
                     <div class="countdown-item d-flex justify-content-center align-items-center flex-column">

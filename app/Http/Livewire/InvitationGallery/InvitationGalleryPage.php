@@ -168,7 +168,7 @@ class InvitationGalleryPage extends Component
         return $db->save();
     }
 
-    private function uploadImageIntervention($image)
+    private function uploadImageIntervention($image): string
     {
         $basename = Str::random();
         $thumbnail = 'thumb_' . $basename .'.'. $image->getClientOriginalExtension();
@@ -176,9 +176,10 @@ class InvitationGalleryPage extends Component
 
         $image = $this->image;
         $img = Image::make($image->getRealPath())->encode('jpg', 65)
-            ->resize(360, null, function ($c) {
-            $c->aspectRatio();
-            $c->upsize();
+            ->orientate()
+            ->fit(360, null, function ($c) {
+                $c->aspectRatio();
+                $c->upsize();
         });
         $img->stream();
         Storage::disk('local')->put("/gallery/$thumbnail", $img);

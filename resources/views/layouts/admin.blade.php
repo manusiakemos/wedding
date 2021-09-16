@@ -9,8 +9,7 @@
     <title>{{config('app.name')}}</title>
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='{{ asset('vendor/uicons/css/uicons-regular-rounded.css') }}'>
     @livewireStyles
     @stack("styles")
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>

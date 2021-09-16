@@ -46,13 +46,12 @@ class InvitationGallery extends Model
 
     public function getThumbnailAttribute()
     {
-
         if (isset($this->filename)) {
             $fx = $this->filename;
             $fy = preg_replace('/\/gallery\//', '', $fx);
             return '/gallery/thumb_' . $fy;
-        } else {
-            return null;
         }
+
+        return "";
     }
 }

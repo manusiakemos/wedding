@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            @livewire("invitation-gallery.invitation-gallery-table")
+            @livewire("invitation-gallery.invitation-gallery-table-data")
         </div>
     </section>
 

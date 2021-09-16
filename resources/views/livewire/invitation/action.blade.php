@@ -3,13 +3,13 @@
         <div class="items-center">
             <button @click="isOpen = !isOpen"
                     class="rounded-full overflow-hidden hover:border-red-400 focus:outline-none">
-                <span class="flex items-center fi-br-menu-dots-vertical"></span>
+                <span class="flex items-center fi-rr-menu-dots"></span>
             </button>
         </div>
     </div>
     <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
     <div x-show="isOpen"
-         class="fixed z-90 w-40 bg-gray-700 rounded-lg border-2 border-gray-800 shadow-lg py-2 mt-16 z-10">
+         class="fixed left-1/2 right-1/2 z-90 w-40 bg-gray-700 rounded-lg border-2 border-gray-800 shadow-lg py-2 mt-16 z-10">
         <!--variant text, circle, normal -->
         <x-admin.button class="border-b text-white"
                         variant="text"

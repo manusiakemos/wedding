@@ -15,7 +15,6 @@ class InvitationPage extends Component
         "theme_id" => "",
         "invitation_url" => "",
     ];
-
     public $breadcrumbs = [
         ["link" => "#", "title" => "Admin"],
         ["link" => "#", "title" => "Invitation"],

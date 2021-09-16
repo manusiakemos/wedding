@@ -3,16 +3,18 @@
 namespace App\Http\Livewire\InvitationGallery;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Artisan;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\InvitationGallery;
 use Rappasoft\LaravelLivewireTables\Views\Filter;
 
-class InvitationGalleryTable extends DataTableComponent
+class InvitationGalleryTableData extends DataTableComponent
 {
 
-    public string $defaultSortColumn = 'title';
-    public string $defaultSortDirection = 'asc';
+
+    public string $defaultSortColumn = 'created_at';
+    public string $defaultSortDirection = 'desc';
     public bool $perPageAll = true;
 
     public array $bulkActions = [
@@ -31,11 +33,11 @@ class InvitationGalleryTable extends DataTableComponent
 
     public function columns(): array
     {
-        if ($this->page > 1) {
-            $this->index = ($this->page - 1) * $this->perPage;
-        } else {
-            $this->index = 0;
-        }
+//        if ($this->page > 1) {
+//            $this->index = ($this->page - 1) * $this->perPage;
+//        } else {
+//            $this->index = 0;
+//        }
 
         return [
 //            Column::make(__('No.'))->format(function () {
@@ -54,9 +56,14 @@ class InvitationGalleryTable extends DataTableComponent
                 })
                 ->sortable(),
             Column::make('Filename', 'filename')
-                ->asHtml()
                 ->format(function (InvitationGallery $row) {
-                    return "<img class='h-10' src='".asset($row->filename)."'>";
+                    return $row->filename;
+                })
+                ->searchable()
+                ->sortable(),
+            Column::make('Created At', 'created_at')
+                ->format(function (InvitationGallery $row) {
+                    return $row->created_at;
                 })
                 ->searchable()
                 ->sortable(),

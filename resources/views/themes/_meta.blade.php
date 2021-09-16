@@ -12,4 +12,6 @@
 <meta property="twitter:title" content="{{ $meta['brides']['male']['nickname'] }} &  {{$meta['brides']['female']['nickname'] }}">
 <meta property="twitter:description" content="Website undangan premium">
 
+<meta name="google-site-verification" content="wi6CGY8f1UwzoZolLr77Xm2Xj-2R0469MA4SNfq1OQY" />
+
 <title>Undangan {{ $meta['brides']['male']['nickname'] }} &  {{$meta['brides']['female']['nickname'] }}</title>
