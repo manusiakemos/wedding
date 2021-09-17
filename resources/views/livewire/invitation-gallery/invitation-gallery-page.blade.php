@@ -11,8 +11,9 @@
                     <x-admin.button type="button" class="mb-3"
                                     wire:click="create">Create
                     </x-admin.button>
+
                     <x-admin.button type="button" class="btn rounded-pill bg-red-500 text-white mb-3 mx-1"
-                                    wire:click="$emit('refreshDt', true)">Refresh
+                                    wire:click="$emit('refreshDt', false)">Refresh
                     </x-admin.button>
                 </div>
             </div>
@@ -29,6 +30,7 @@
 @push("scripts")
     @include("includes.toast-scripts")
 
-    @include("includes.dt-scripts",['table' => 'invitation-gallery.invitation-gallery-table'])
+    @include("includes.dt-scripts",['table' => 'invitation-gallery.invitation-gallery-table-data'])
 @endpush
+
 

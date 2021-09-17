@@ -59,6 +59,7 @@
 </section>
 
 @push("script")
+    <script src="{{asset('vendor/crudgen/libs/etc/moment.min.js')}}"></script>
     <script>
         var counter = new Vue({
             el: "#countdown",
@@ -88,14 +89,15 @@
             },
             methods: {
                 setDate() {
-                    var cdu = document.querySelector('meta[name="countdown-until"]').content;
-                    var cdd = new Date(cdu).getTime();
+                    var dt = document.querySelector('meta[name="countdown-until"]').content;
                     var vm = this;
                     var x = setInterval(function () {
 
-                        var now = new Date().getTime();
 
-                        var distance = cdd - now;
+                        var a = moment(dt);
+                        var b = moment();
+
+                        var distance = a.diff(b).valueOf();
 
                         if (distance <= 0) {
                             clearInterval(x);

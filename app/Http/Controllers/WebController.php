@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Invitation;
 use Illuminate\Http\Request;
+
 class WebController extends Controller
 {
     public function welcome()
@@ -13,7 +14,14 @@ class WebController extends Controller
 
     public function wedding($invitationUrl = "hw")
     {
-        $invitation = Invitation::with(['theme', 'galleries'])
+        $q = [
+            'galleries' => function ($query) {
+                $query->orderBy("created_at", "asc");
+            },
+            'theme'
+        ];
+
+        $invitation = Invitation::with($q)
             ->where("invitation_url", "=", $invitationUrl)
             ->firstOrFail();
         $meta = json_decode($invitation->invitation_meta, true);

@@ -28,6 +28,8 @@
                     timeout: 1500
                 }
             ).show();
+        }else{
+            window.location.reload();
         }
     });
 </script>

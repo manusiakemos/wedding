@@ -175,9 +175,9 @@ class InvitationGalleryPage extends Component
         $original = $basename .'.'. $image->getClientOriginalExtension();
 
         $image = $this->image;
-        $img = Image::make($image->getRealPath())->encode('jpg', 65)
+        $img = Image::make($image->getRealPath())->encode('jpg', 90)
             ->orientate()
-            ->fit(360, null, function ($c) {
+            ->fit(400, 600, function ($c) {
                 $c->aspectRatio();
                 $c->upsize();
         });
